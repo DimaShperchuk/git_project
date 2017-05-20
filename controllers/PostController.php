@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: shperchuk
- * Date: 18.05.2017
- * Time: 23:00
+ * Date: 20.05.2017
+ * Time: 17:31
  */
 
 namespace app\controllers;
@@ -11,15 +11,13 @@ namespace app\controllers;
 
 class PostController extends AppController
 {
-    public function actionIndex($name)
+    public function actionIndex()
     {
-
-        return $this->render("index", compact("name"));
+        return $this->render('index');
     }
 
     public function actionTest()
     {
-        return $this->render("test");
+        return $this->render('test');
     }
-
 }

@@ -1,5 +1,1 @@
-<code>
-    <?=__FILE__?>
-</code>
-<br>
-<?= $name ?>
+<code><?=__FILE__?></code>
