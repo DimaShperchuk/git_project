@@ -1,7 +1,10 @@
+<h1>hello</h1>
 <?php
-/**
- * Created by PhpStorm.
- * User: shperchuk
- * Date: 24.05.2017
- * Time: 20:18
- */
+     echo $hi;
+     echo '<br>';
+     foreach ($names as $name)
+     {
+         echo $name. '<br>';
+     }
+         echo 'Your id is ' . $id;
+?>

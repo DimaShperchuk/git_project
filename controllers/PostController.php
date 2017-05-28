@@ -2,22 +2,43 @@
 /**
  * Created by PhpStorm.
  * User: shperchuk
- * Date: 20.05.2017
- * Time: 17:31
+ * Date: 24.05.2017
+ * Time: 23:54
  */
 
 namespace app\controllers;
-
+use Yii;
+use app\models\TestForm;
 
 class PostController extends AppController
 {
+    public $layout = 'basic';
+
     public function actionIndex()
     {
-        return $this->render('index');
+        if( Yii::$app->request->isAjax )
+        {
+            return 'test';
+        }
+
+        $model = new TestForm();
+        if( $model-> load(Yii::$app->request->post()) ){
+            if($model-> validate()){
+              Yii::$app->session->setFlash('success', 'dannie pprinztie');
+              return $this->refresh();
+            }
+            else{
+              Yii::$app->session->setFlash('error', 'dannie error');
+            }
+        }
+
+        return $this->render('index', compact('model'));
     }
 
-    public function actionTest()
+    public function actionShow()
     {
-        return $this->render('test');
+        $this->view->title = 'одна стаття';
+
+        return $this->render('show');
     }
 }

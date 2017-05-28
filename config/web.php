@@ -6,10 +6,12 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru',
+    //'layout' => 'basic',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'lMNeY8bZBQ8v2XyRzHq2sDNU9K-T3erx',
+            'cookieValidationKey' => 'iNZ4kKBXTIkiuOyA83hjUuRJ1aKC4TqK',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -38,14 +40,14 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-
+        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-
+        */
     ],
     'params' => $params,
 ];

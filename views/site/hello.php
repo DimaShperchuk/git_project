@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: shperchuk
- * Date: 23.05.2017
- * Time: 23:03
- */
+<code> <? echo "hello"?> </code>
